@@ -38,7 +38,10 @@ void ImageLabel::resizeEvent( QResizeEvent* event )
 
 QPixmap ImageLabel::pixmap() const
 {
-    return label->pixmap();
+    if (label->pixmap())
+    return *label->pixmap();
+
+return QPixmap();
 }
 
 bool ImageLabel::event( QEvent* e )
