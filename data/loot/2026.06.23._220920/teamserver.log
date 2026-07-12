@@ -1,0 +1,22 @@
+              _______           _______  _______ 
+    │\     /│(  ___  )│\     /│(  ___  )(  ____ \
+    │ )   ( ││ (   ) ││ )   ( ││ (   ) ││ (    \/
+    │ (___) ││ (___) ││ │   │ ││ │   │ ││ │      
+    │  ___  ││  ___  │( (   ) )│ │   │ ││ │      
+    │ (   ) ││ (   ) │ \ \_/ / │ │   │ ││ │      
+    │ )   ( ││ )   ( │  \   /  │ (___) ││ (____/\
+    │/     \││/     \│   \_/   (_______)(_______/
+
+  	 pwn and elevate until it's done
+
+[22:09:20] [INFO] Havoc Framework [Version: 0.7] [CodeName: Bites The Dust]
+[22:09:20] [INFO] Havoc profile: ./profiles/havoc.yaotl
+[22:09:20] [INFO] Build: 
+ - Compiler x64 : /usr/bin/x86_64-w64-mingw32-gcc
+ - Compiler x86 : /usr/bin/i686-w64-mingw32-gcc
+ - Nasm         : /usr/bin/nasm
+[22:09:20] [INFO] Time: 23/06/2026 22:09:20
+[22:09:20] [INFO] Teamserver logs saved under: data/loot/2026.06.23._22:09:20
+[22:09:20] [INFO] Starting Teamserver on wss://0.0.0.0:40056
+[22:09:20] [INFO] [SERVICE] starting service handle on wss://0.0.0.0:40056/service-endpoint
+[22:09:20] [INFO] Opens existing database: data/teamserver.db
