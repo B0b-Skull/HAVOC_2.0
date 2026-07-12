@@ -1,4 +1,0 @@
-/mnt/c/CODEX/HAVOC/Havoc-main/client/Build-wsl/CMakeFiles/Havoc.dir
-/mnt/c/CODEX/HAVOC/Havoc-main/client/Build-wsl/CMakeFiles/edit_cache.dir
-/mnt/c/CODEX/HAVOC/Havoc-main/client/Build-wsl/CMakeFiles/rebuild_cache.dir
-/mnt/c/CODEX/HAVOC/Havoc-main/client/Build-wsl/CMakeFiles/Havoc_autogen.dir
