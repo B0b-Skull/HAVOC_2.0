@@ -33,7 +33,7 @@ client-build:
 	@ echo "[*] building client"
 	@ bash scripts/hydrate-client-deps.sh
 	@ rm -rf client/Build
-	@ mkdir client/Build; cd client/Build; cmake ..
+	@ mkdir client/Build; cd client/Build; cmake .. -DPython3_EXECUTABLE=$$(which python3)
 	@ if [ -d "client/Modules" ]; then echo "Modules installed"; else git clone --depth=1 https://github.com/HavocFramework/Modules client/Modules; fi
 	@ cmake --build client/Build --parallel
 
