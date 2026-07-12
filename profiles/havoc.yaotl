@@ -1,0 +1,39 @@
+Teamserver {
+    Host = "0.0.0.0"
+    Port = 40056
+
+    Build {
+        Compiler64 = "x86_64-w64-mingw32-gcc"
+        Compiler86 = "i686-w64-mingw32-gcc"
+        Nasm = "nasm"
+    }
+}
+
+Operators {
+    user "5pider" {
+        Password = "password1234"
+    }
+
+    user "Neo" {
+        Password = "password1234"
+    }
+}
+
+# this is optional. if you dont use it you can remove it.
+Service {
+    Endpoint = "service-endpoint"
+    Password = "service-password"
+}
+
+Demon {
+    Sleep = 3600
+    Jitter = 15
+
+    TrustXForwardedFor = false
+
+    Injection {
+        Spawn64 = "C:\\Windows\\System32\\werfault.exe"
+        Spawn32 = "C:\\Windows\\SysWOW64\\werfault.exe"
+    }
+}
+

@@ -1,0 +1,41 @@
+services:
+  havoc-dev:
+    build:
+      context: .
+      dockerfile: docker/gcc16/Dockerfile
+    image: havoc:latest
+    working_dir: /work
+    volumes:
+      - .:/work
+      - go-mod-cache:/root/go/pkg/mod
+      - go-build-cache:/root/.cache/go-build
+    command: ["bash", "scripts/verify-gcc16.sh"]
+
+  teamserver:
+    container_name: Havoc
+    image: havoc:latest
+    build:
+      context: .
+      dockerfile: docker/gcc16/Dockerfile
+    working_dir: /work
+    volumes:
+      - .:/work
+      - go-mod-cache:/root/go/pkg/mod
+      - go-build-cache:/root/.cache/go-build
+    ports:
+      - "40056:40056"
+    command: ["bash", "-lc", "make dev-ts-compile && ./havoc server --profile ./profiles/havoc.yaotl -v --debug"]
+
+  hydrate-client-deps:
+    image: havoc:latest
+    build:
+      context: .
+      dockerfile: docker/gcc16/Dockerfile
+    working_dir: /work
+    volumes:
+      - .:/work
+    command: ["bash", "scripts/hydrate-client-deps.sh"]
+
+volumes:
+  go-mod-cache:
+  go-build-cache:
